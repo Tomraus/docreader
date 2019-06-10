@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Filename</th>
+        <th> Newspaper name</th>
+        <th> Width</th>
+        <th> Height</th>
+        <th> Dpi</th>
+        <th> Upload date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${allDocsInfo.empty}">
+        <td colspan="2"> No documents informations available</td>
+    </tr>
+    <tr th:each="docInfo: ${allDocsInfo}">
+        <td><span th:text="${docInfo.fileName}"> Filename </span></td>
+        <td><span th:text="${docInfo.newspaperName}"> Newspaper name</span></td>
+        <td><span th:text="${docInfo.width}"> Width </span></td>
+        <td><span th:text="${docInfo.height}"> Height </span></td>
+        <td><span th:text="${docInfo.dpi}"> Dpi </span></td>
+        <td><span th:text="${docInfo.uploadDate}"> Upload date </span></td>
+    </tr>
+    </tbody>
+</table>
+<form method="GET" action="/">
+    <input type="submit" value="Return"/>
+</form>
+</body>
+</html>
+

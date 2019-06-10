@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:if="${message}">
+    <label th:text="${message}"/>
+</div>
+<form method="POST" action="/files" enctype="multipart/form-data">
+    <input type="file" name="file" value="Choose file"/><br/><br/>
+    <input type="submit" value="Submit"/>
+</form>
+<form method="GET" action="/files">
+    <input type="submit" value="Preview"/>
+</form>
+</body>
+</html>
