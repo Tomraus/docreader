@@ -1,0 +1,9 @@
+target
+*.iml
+.idea/
+deploy/
+out/
+build/
+.gradle/
+
+/.nb-gradle/
